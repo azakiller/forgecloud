@@ -2,6 +2,11 @@
 #!/bin/bash
 set -e
 
+# Si WORKSPACE no está definido, usar /workspace
+if [ -z "$WORKSPACE" ]; then
+    WORKSPACE="/workspace"
+fi
+
 FORGE="${WORKSPACE}/stable-diffusion-webui-forge"
 DRIVE="gdrive:stable-drive"
 
